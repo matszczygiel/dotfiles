@@ -2,51 +2,16 @@ modkey = "Mod4"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-[[keybind]]
-command = "Execute"
-value = "firefox"
-modifier = ["modkey", "Control"]
-key = "1"
-
-[[keybind]]
-command = "Execute"
-value = "code"
-modifier = ["modkey", "Control"]
-key = "2"
-
-[[keybind]]
-command = "Execute"
-value = "dmenu_run"
-modifier = ["modkey"]
-key = "p"
-
-[[keybind]]
-command = "Execute"
-value = "alacritty"
-modifier = ["modkey", "Shift"]
-key = "Return"
-
+# leftwm actions
 [[keybind]]
 command = "CloseWindow"
-modifier = ["modkey", "Shift"]
+modifier = ["modkey"]
 key = "q"
 
 [[keybind]]
 command = "SoftReload"
 modifier = ["modkey", "Shift"]
 key = "r"
-
-[[keybind]]
-command = "Execute"
-value = "pkill leftwm"
-modifier = ["modkey", "Shift"]
-key = "x"
-
-[[keybind]]
-command = "Execute"
-value = "slock"
-modifier = ["modkey", "Control"]
-key = "l"
 
 [[keybind]]
 command = "MoveToLastWorkspace"
@@ -61,12 +26,12 @@ key = "w"
 [[keybind]]
 command = "MoveWindowUp"
 modifier = ["modkey", "Shift"]
-key = "Up"
+key = "k"
 
 [[keybind]]
 command = "MoveWindowDown"
 modifier = ["modkey", "Shift"]
-key = "Down"
+key = "l"
 
 [[keybind]]
 command = "MoveWindowTop"
@@ -76,32 +41,32 @@ key = "Return"
 [[keybind]]
 command = "FocusWindowUp"
 modifier = ["modkey"]
-key = "Up"
+key = "k"
 
 [[keybind]]
 command = "FocusWindowDown"
 modifier = ["modkey"]
-key = "Down"
+key = "l"
 
 [[keybind]]
 command = "NextLayout"
 modifier = ["modkey", "Control"]
-key = "Up"
+key = "k"
 
 [[keybind]]
 command = "PreviousLayout"
 modifier = ["modkey", "Control"]
-key = "Down"
+key = "l"
 
 [[keybind]]
 command = "FocusWorkspaceNext"
 modifier = ["modkey"]
-key = "Right"
+key = ";"
 
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
-key = "Left"
+key = "j"
 
 [[keybind]]
 command = "GotoTag"
@@ -210,3 +175,60 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
+
+# executes
+
+[[keybind]]
+command = "Execute"
+value = "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
+command = "Execute"
+value = "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
+[[keybind]]
+command = "Execute"
+value = "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+modifier = []
+key = "XF86XK_AudioMute"
+
+[[keybind]]
+command = "Execute"
+value = "firefox"
+modifier = ["modkey", "Control"]
+key = "1"
+
+[[keybind]]
+command = "Execute"
+value = "code"
+modifier = ["modkey", "Control"]
+key = "2"
+
+#[[keybind]]
+#command = "Execute"
+#value = "dmenu_run"
+#modifier = ["modkey"]
+#key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show drun"
+modifier = ["modkey"]
+key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "alacritty"
+modifier = ["modkey", "Shift"]
+key = "Return"
+
+[[keybind]]
+command = "Execute"
+value = "pkill leftwm"
+modifier = ["modkey", "Shift"]
+key = "x"
+
