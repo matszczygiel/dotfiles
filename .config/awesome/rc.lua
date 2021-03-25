@@ -590,7 +590,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Compositor
 --awful.spawn.with_shell("compton --blur-background --blur-background-frame --blur-background-fixed")
-awful.spawn.with_shell("picom --blur-background-frame --experimental-backends --backend glx --blur-method=box --blur-size=6 --detect-client-opacity -i 0.98 --blur-background-fixed")
+--awful.spawn.with_shell("picom --blur-background-frame --experimental-backends --backend glx --blur-method=box --blur-size=6 --detect-client-opacity -i 0.98 --blur-background-fixed")
+awful.spawn.with_shell("picom --blur-background-frame --experimental-backends --backend glx --blur-method=box --blur-size=6 --detect-client-opacity --blur-background-fixed")
 
 
 
