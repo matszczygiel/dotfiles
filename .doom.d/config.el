@@ -59,4 +59,3 @@
 (setq lsp-rust-analyzer-server-display-inlay-hints t)
 (setq company-idle-delay 0.5)
 (setq doom-font (font-spec :family "Fira Code" :size 10 :weight 'semi-bold))
-(setq display-line-numbers-type 'relative)
