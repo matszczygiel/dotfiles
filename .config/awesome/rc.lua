@@ -49,8 +49,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
--- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.init("/home/mateusz/.config/awesome/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "theme.lua")
+beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -590,10 +590,6 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Compositor
---awful.spawn.with_shell("compton --blur-background --blur-background-frame --blur-background-fixed")
---awful.spawn.with_shell("picom --blur-background-frame --experimental-backends --backend glx --blur-method=box --blur-size=6 --detect-client-opacity -i 0.98 --blur-background-fixed")
-awful.spawn.with_shell("picom --blur-background-frame --experimental-backends --backend glx --blur-method=box --blur-size=6 --detect-client-opacity --blur-background-fixed")
 
 
 
