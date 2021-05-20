@@ -334,7 +334,11 @@ globalkeys = gears.table.join(
     --awful.key({ modkey }, "p", function() menubar.show() end,
     --          {description = "show the menubar", group = "launcher"})
     awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun") end,
-              {description = "show rofi", group = "launcher"})
+              {description = "show rofi", group = "launcher"}),
+
+    --- Lock
+    awful.key({ modkey, "Shift", "Control" }, "l", function() awful.spawn("xsecurelock") end,
+              {description = "lock screen", group = "lock"})
 )
 
 clientkeys = gears.table.join(
