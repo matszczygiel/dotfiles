@@ -1,0 +1,28 @@
+
+add_newline = false
+
+format = "$username $time $directory $git_branch$git_status $status$cmd_duration$character"
+
+[status]
+disabled = false
+
+[time]
+disabled = false
+format = " [$time]($style)"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+
+[git_branch]
+format = "[$symbol$branch]($style)"
+
+[directory]
+format = " [$path]($style)[$read_only]($read_only_style)"
+
+[character]
+#success_symbol = "(bold green)"
+#error_symbol = "(bold red)"
+#vicmd_symbol = "(bold green)"
+
+[cmd_duration]
+format = "羽[$duration]($style)"
