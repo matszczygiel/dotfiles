@@ -16,7 +16,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
+--require("awful.hotkeys_popup.keys")
 
 local freedesktop = require("freedesktop")
 
@@ -53,6 +53,8 @@ beautiful.init("~/.config/awesome/theme.lua")
 terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
+browser = "x-www-browser"
+file_manager = "xdg-open " .. os.getenv("HOME")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -336,9 +338,31 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun") end,
               {description = "show rofi", group = "launcher"}),
 
-    --- Lock
+    -- Launchers
+
+    awful.key({ modkey }, "b", function() awful.spawn(browser) end,
+              {description = "open browser", group = "launcher"}),
+
+    awful.key({ modkey }, "d", function() awful.spawn(file_manager) end,
+              {description = "open file manager", group = "launcher"}),
+              
+    awful.key({ modkey }, "c", function() awful.spawn("code") end,
+              {description = "open vs code", group = "launcher"}),
+
+    --- System
     awful.key({ modkey, "Shift", "Control" }, "l", function() awful.spawn("xsecurelock") end,
-              {description = "lock screen", group = "lock"})
+              {description = "lock screen", group = "system"}),
+
+    awful.key({ modkey, "Shift", "Control" }, "s", function() awful.spawn("shutdown now") end,
+              {description = "shutdown", group = "system"}),
+
+    awful.key({ modkey, "Shift", "Control" }, "r", function() awful.spawn("reboot") end,
+              {description = "reboot", group = "system"}),
+
+    -- Multimedia keys
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end)
 )
 
 clientkeys = gears.table.join(
@@ -382,12 +406,8 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "maximize horizontally", group = "client"}),
+        {description = "maximize horizontally", group = "client"})
 
-    -- Multimedia keys
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end)
 )
 
 -- Bind all key numbers to tags.
