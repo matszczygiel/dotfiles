@@ -19,6 +19,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 --require("awful.hotkeys_popup.keys")
 
 local freedesktop = require("freedesktop")
+local xrandr = require("xrandr")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -359,6 +360,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift", "Control" }, "r", function() awful.spawn("reboot") end,
               {description = "reboot", group = "system"}),
 
+    awful.key({ modkey, "Control", "Shift" }, "x", function () xrandr.xrandr() end,
+              {description = "xrandr", group = "system"}),
+
     -- Multimedia keys
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
@@ -593,13 +597,17 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
+--client.connect_signal("mouse::enter", function(c)
+--    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+--    end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+--awful.spawn({"sh", "sleep 2 && ~/.screenlayout/default.sh"})
+
 -- }}}
+
 
 
 
