@@ -347,6 +347,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "c", function() awful.spawn("code") end,
               {description = "open vs code", group = "launcher"}),
 
+    awful.key({ modkey }, "Print", function() awful.spawn("flameshot gui") end,
+              {description = "open flameshot", group = "launcher"}),
+
     --- System
     awful.key({ modkey, "Shift", "Control" }, "l", function() awful.spawn("xsecurelock") end,
               {description = "lock screen", group = "system"}),
@@ -602,6 +605,8 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 --awful.spawn({"sh", "sleep 2 && ~/.screenlayout/default.sh"})
+awful.util.spawn_with_shell("~/.screenlayout/default.sh")
+awful.util.spawn_with_shell("flameshot")
 
 -- }}}
 
