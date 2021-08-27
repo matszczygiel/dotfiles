@@ -12,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -222,10 +223,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Window navigation
 """"""""""""""""""""""""""""
 "movement
-nnoremap <silent> <leader>wh :wincmd h<CR>
-nnoremap <silent> <leader>wj :wincmd j<CR>
-nnoremap <silent> <leader>wk :wincmd k<CR>
 nnoremap <silent> <leader>wl :wincmd l<CR>
+nnoremap <silent> <leader>wk :wincmd k<CR>
+nnoremap <silent> <leader>wj :wincmd j<CR>
+nnoremap <silent> <leader>wh :wincmd h<CR>
+
+nnoremap <silent> <leader>wL :wincmd ><CR>
+nnoremap <silent> <leader>wH :wincmd <<CR>
 
 "splits
 nnoremap <silent> <leader>sv :vsplit<CR>
@@ -250,11 +254,22 @@ let g:airline#extensions#tabline#ignore_bufadd_pat = 'term:'
 let g:airline#extensions#tabline#fnamemod = ':.'
 let g:airline#extensions#tabline#fnamecollapse = 0
 
+
+""""""""""""""""""""""""""""
+" NERDCommenter
+""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""
+" Custom
+""""""""""""""""""""""""""""
+
+"load config
+nnoremap <silent> <leader>lc :source ~/.config/nvim/init.vim<CR>
+
 nnoremap <silent> <leader>bh :bprev<CR>
 nnoremap <silent> <leader>bl :bnext<CR>
 
 
-
-
+colo elflord
 
 
