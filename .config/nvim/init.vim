@@ -21,7 +21,11 @@ call plug#end()
 
 set rnu nu
 
-set guifont=FiraCode\ Nerd\ Font:h12
+set guifont=FiraCode\ Nerd\ Font:h9
+
+colo dracula
+
+
 
 """"""""""""""""""""""""""""
 " Leader
@@ -296,8 +300,5 @@ nnoremap <silent> <leader>lc :source ~/.config/nvim/init.vim<CR>
 
 nnoremap <silent> <leader>bh :bprev<CR>
 nnoremap <silent> <leader>bl :bnext<CR>
-
-
-colo elflord
 
 
