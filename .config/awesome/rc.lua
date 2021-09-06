@@ -347,6 +347,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "c", function() awful.spawn("code") end,
               {description = "open vs code", group = "launcher"}),
 
+    awful.key({ modkey }, "v", function() awful.spawn("neovide") end,
+              {description = "open neovide", group = "launcher"}),
+
     awful.key({ modkey }, "Print", function() awful.spawn("flameshot gui") end,
               {description = "open flameshot", group = "launcher"}),
 
