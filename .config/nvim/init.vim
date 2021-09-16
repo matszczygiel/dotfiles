@@ -301,6 +301,9 @@ nnoremap <silent> <leader>lc :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent> <leader>bh :bprev<CR>
 nnoremap <silent> <leader>bl :bnext<CR>
 
+"save all
+nnoremap <silent> <leader>sa :wa<CR>
+
 " make substitue live changes
 set inccommand=nosplit
 
