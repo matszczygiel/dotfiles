@@ -25,6 +25,8 @@ set guifont=FiraCode\ Nerd\ Font:h9
 
 colo dracula
 
+set mouse=a
+
 
 
 """"""""""""""""""""""""""""
