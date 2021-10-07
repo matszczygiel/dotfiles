@@ -23,8 +23,6 @@ set rnu nu
 
 set guifont=FiraCode\ Nerd\ Font:h8
 
-colo dracula
-
 set mouse=a
 
 
