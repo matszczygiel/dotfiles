@@ -25,6 +25,11 @@ set guifont=FiraCode\ Nerd\ Font:h8
 
 set mouse=a
 
+let g:airline_theme = 'dracula'
+let g:dracula_colorterm = 0
+
+colo dracula
+
 
 
 """"""""""""""""""""""""""""
@@ -204,12 +209,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-"highlight CocFloating ctermbg=Cyan  ctermfg=Green
-"highlight CocHintFloat ctermbg=Gray  ctermfg=White
-"highlight CocErrorFloat ctermbg=LightRed  ctermfg=Red
-"highlight CocWarnFloat ctermbg=LightYellow  ctermfg=Yellow
-
-
 
 """"""""""""""""""""""""""""
 " Window navigation
@@ -231,7 +230,6 @@ nnoremap <silent> <leader>sh :hsplit<CR>
 """"""""""""""""""""""""""""
 " Airline
 """"""""""""""""""""""""""""
-let g:airline_theme = 'bubblegum'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
@@ -282,7 +280,8 @@ nnoremap <silent> <Leader>F        :Files<CR>
 """"""""""""""""""""""""""""
 
 "load config
-nnoremap <silent> <leader>lc :source ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>cr :source ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>co :e ~/.config/nvim/init.vim<CR>
 
 "buffer management
 " Delete buffer while keeping window layout (don't close buffer's windows).
@@ -368,8 +367,12 @@ nnoremap <silent> <leader>bl :bnext<CR>
 "save all
 nnoremap <silent> <leader>sa :wa<CR>
 
-" make substitue live changes
+"make substitue live changes
 set inccommand=nosplit
+
+"rust
+autocmd FileType rust nnoremap <buffer> <leader>rt :RustTest<CR>
+
 
 
 
