@@ -1,0 +1,3 @@
+[[langauge]]
+name = "rust"
+config = { checkOnSave.command = "clippy" }
