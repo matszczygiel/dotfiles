@@ -27,4 +27,4 @@ format = "[$path]($style)[$read_only]($read_only_style)"
 #vicmd_symbol = "(bold green)"
 
 [cmd_duration]
-format = "羽[$duration]($style)"
+format = "[羽$duration]($style)"
