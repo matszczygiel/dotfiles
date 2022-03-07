@@ -611,6 +611,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("~/.screenlayout/default.sh")
 awful.util.spawn_with_shell("flameshot")
 awful.util.spawn_with_shell("picom")
+awful.util.spawn_with_shell("nextcloud --background")
+awful.util.spawn_with_shell("xset r rate 300 50")
 
 -- }}}
 

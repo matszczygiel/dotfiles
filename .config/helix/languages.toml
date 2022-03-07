@@ -5,3 +5,7 @@ config = { checkOnSave.command = "clippy" }
 [[language]]
 name = "glsl"
 file-types = ["rgen", "rchit", "rmiss"]
+
+[[language]]
+name = "html"
+file-types = ["html.tera"]
