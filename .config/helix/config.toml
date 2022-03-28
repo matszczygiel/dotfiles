@@ -5,5 +5,5 @@ theme = "monokai_pro_spectrum"
 line-number = "relative"
 
 
-[lsp]
+[editor.lsp]
 display-messages = true
