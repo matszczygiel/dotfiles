@@ -4,4 +4,4 @@ config = { checkOnSave.command = "clippy" }
 
 [[language]]
 name = "glsl"
-file-types = ["rgen", "rchit", "rmiss"]
+file-types = ["rgen", "rchit", "rmiss", "comp", "glsl"]
