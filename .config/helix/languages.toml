@@ -5,3 +5,15 @@ config = { checkOnSave.command = "clippy" }
 [[language]]
 name = "glsl"
 file-types = ["rgen", "rchit", "rmiss", "comp", "glsl"]
+
+[[language]]
+name = "json"
+language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
+
+[[language]]
+name = "html"
+language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
+
+[[language]]
+name = "css"
+language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
