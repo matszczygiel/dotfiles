@@ -4,9 +4,9 @@ theme = "catpuccin"
 line-number = "relative"
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
-select = "underline"
+select = "block"
 
 [editor.lsp]
 display-messages = true
