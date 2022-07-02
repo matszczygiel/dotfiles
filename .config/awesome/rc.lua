@@ -614,11 +614,9 @@ awful.util.spawn_with_shell("flameshot")
 awful.util.spawn_with_shell("picom")
 awful.util.spawn_with_shell("nextcloud --background")
 awful.util.spawn_with_shell("xset r rate 300 50")
+awful.util.spawn_with_shell("nm-applet")
 
 -- }}}
-
-
-
 
 
 
