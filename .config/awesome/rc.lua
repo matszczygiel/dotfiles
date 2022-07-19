@@ -370,7 +370,11 @@ globalkeys = gears.table.join(
     -- Multimedia keys
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end)
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end),
+    
+    -- Brightness keys
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 5") end),
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 5") end)
 )
 
 clientkeys = gears.table.join(
@@ -611,9 +615,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --awful.spawn({"sh", "sleep 2 && ~/.screenlayout/default.sh"})
 awful.util.spawn_with_shell("~/.screenlayout/default.sh")
 awful.util.spawn_with_shell("flameshot")
-awful.util.spawn_with_shell("picom")
+awful.util.spawn_with_shell("cbatticon")
 awful.util.spawn_with_shell("nextcloud --background")
 awful.util.spawn_with_shell("xset r rate 300 50")
+awful.util.spawn_with_shell("setxkbmap -option caps:escape")
 awful.util.spawn_with_shell("nm-applet")
 
 -- }}}
