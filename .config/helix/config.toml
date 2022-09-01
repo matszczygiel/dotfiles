@@ -1,12 +1,20 @@
 theme = "noctis"
+# theme = "emacs"
 
 [editor]
 line-number = "relative"
+cursorline = true
+color-modes = true
+
+[editor.indent-guides]
+render = true
+character = "¦"
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "block"
 
 [editor.lsp]
 display-messages = true
+

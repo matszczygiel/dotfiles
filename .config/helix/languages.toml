@@ -13,6 +13,7 @@ language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
 [[language]]
 name = "html"
 language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
+auto-format = false
 
 [[language]]
 name = "css"

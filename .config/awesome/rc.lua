@@ -612,7 +612,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
---awful.spawn({"sh", "sleep 2 && ~/.screenlayout/default.sh"})
 awful.util.spawn_with_shell("~/.screenlayout/default.sh")
 awful.util.spawn_with_shell("flameshot")
 awful.util.spawn_with_shell("cbatticon")
@@ -620,6 +619,8 @@ awful.util.spawn_with_shell("nextcloud --background")
 awful.util.spawn_with_shell("xset r rate 300 50")
 awful.util.spawn_with_shell("setxkbmap -option caps:escape")
 awful.util.spawn_with_shell("nm-applet")
+
+awful.util.spawn_with_shell("ssh-add ~/.ssh/id_rsa")
 
 -- }}}
 
