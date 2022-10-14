@@ -4,7 +4,7 @@ config = { checkOnSave.command = "clippy" }
 
 [[language]]
 name = "glsl"
-file-types = ["rgen", "rchit", "rmiss", "comp", "glsl"]
+file-types = ["rgen", "rchit", "rmiss", "comp", "glsl", "vert", "frag"]
 
 [[language]]
 name = "json"
