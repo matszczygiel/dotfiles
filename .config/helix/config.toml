@@ -5,6 +5,8 @@ theme = "noctis"
 line-number = "relative"
 cursorline = true
 color-modes = true
+auto-save = true
+bufferline = "multiple"
 
 [editor.indent-guides]
 render = true
