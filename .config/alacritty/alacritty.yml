@@ -63,6 +63,12 @@ window:
   #     - buttonless: Title bar, transparent background and no title bar buttons
   decorations: full
 
+
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  # opacity: 1.0
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
@@ -330,11 +336,6 @@ draw_bold_text_with_bright_colors: false
   #     args: ["Hello, World!"]
   #
   #command: None
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
 
 #selection:
   # This string contains all characters that are used as separators for
