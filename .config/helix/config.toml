@@ -20,3 +20,5 @@ select = "block"
 [editor.lsp]
 display-messages = true
 
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]

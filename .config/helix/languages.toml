@@ -1,6 +1,6 @@
 [[language]]
 name = "rust"
-config = { checkOnSave.command = "clippy" }
+config = { checkOnSave.command = "clippy", cargo.buildScripts.enable = true, procMacro.enable = true }
 
 [[language]]
 name = "glsl"

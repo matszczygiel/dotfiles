@@ -612,7 +612,7 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-awful.util.spawn_with_shell("~/.screenlayout/default.sh")
+awful.util.spawn_with_shell("sleep 2 && ~/.screenlayout/default.sh")
 awful.util.spawn_with_shell("flameshot")
 awful.util.spawn_with_shell("cbatticon")
 awful.util.spawn_with_shell("nextcloud --background")
