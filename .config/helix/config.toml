@@ -1,5 +1,4 @@
-theme = "noctis"
-# theme = "emacs"
+theme = "snazzy"
 
 [editor]
 line-number = "relative"
