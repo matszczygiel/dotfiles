@@ -11,7 +11,7 @@ disabled = false
 
 [time]
 disabled = false
-format = "[$time]($style) "
+format = "[ $time]($style) "
 
 [git_branch]
 format = "[$symbol$branch]($style) "
@@ -24,8 +24,16 @@ error_symbol = "[❯](bold red)"
 vicmd_symbol = "[❮](bold green)"
 
 [cmd_duration]
-format = "[羽$duration]($style)"
+disabled = true
+format = "[$duration]($style)"
 
 [rust]
 format = "[$symbol($version )]($style)"
 symbol = " "
+
+[directory]
+truncation_length = 5
+truncation_symbol = ".../"
+repo_root_style = "bold green"
+truncate_to_repo = false
+
