@@ -1,6 +1,5 @@
 [[language]]
 name = "rust"
-config = { check.command = "clippy", cargo.buildScripts.enable = true, procMacro.enable = true }
 
 [[language]]
 name = "glsl"
@@ -8,13 +7,29 @@ file-types = ["rgen", "rchit", "rmiss", "comp", "glsl", "vert", "frag"]
 
 [[language]]
 name = "json"
-language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
+language-servers = ["vscode-json-languageserver"]
 
 [[language]]
 name = "html"
-language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
+language-servers = ["vscode-html-languageserver"]
 auto-format = false
 
 [[language]]
 name = "css"
-language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
+language-servers = ["vscode-css-languageserver"]
+
+
+[language-server.rust-analyzer]
+config = { check.command = "clippy", cargo.buildScripts.enable = true, procMacro.enable = true }
+
+[language-server.vscode-css-languageserver]
+command = "vscode-css-languageserver"
+args = ["--stdio"] 
+
+[language-server.vscode-json-languageserver]
+command = "vscode-json-languageserver"
+args = ["--stdio"] 
+
+[language-server.vscode-html-languageserver]
+command = "vscode-html-languageserver"
+args = ["--stdio"] 
