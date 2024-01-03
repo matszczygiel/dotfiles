@@ -1,4 +1,4 @@
-import = ["/home/mateuszszczygiel/.config/alacritty/dracula.toml"]
+import = ["~/.config/alacritty/dracula.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = false
