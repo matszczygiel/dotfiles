@@ -1,23 +1,21 @@
-theme = "modus_vivendi"
+theme = "material_oceanic"
 
 [editor]
 line-number = "relative"
 cursorline = true
+cursorcolumn = true
 color-modes = true
-auto-save = true
 bufferline = "multiple"
+
+[editor.auto-save]
+focus-lost = true
 
 [editor.indent-guides]
 render = true
 character = "¦"
 
-[editor.cursor-shape]
-insert = "block"
-normal = "block"
-select = "block"
-
 [editor.lsp]
 display-messages = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
+left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
