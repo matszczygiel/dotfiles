@@ -3,7 +3,6 @@ theme = "material_oceanic"
 [editor]
 line-number = "relative"
 cursorline = true
-cursorcolumn = true
 color-modes = true
 bufferline = "multiple"
 
