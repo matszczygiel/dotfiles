@@ -8,7 +8,7 @@ draw_bold_text_with_bright_colors = false
 TERM = "xterm-256color"
 
 [font]
-size = 9.5
+size = 11
 
 [font.bold]
 style = "Bold"
