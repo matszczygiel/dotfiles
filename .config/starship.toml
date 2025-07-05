@@ -1,7 +1,7 @@
 format = """
 [┌](bold green) \
 $username$directory\
-$git_branch$git_status$git_commit$git_metrics\
+$git_branch$git_status$git_state$git_commit$git_metrics\
 $cmake$rust$python
 [└](bold green) $time$status$cmd_duration$character
 """
