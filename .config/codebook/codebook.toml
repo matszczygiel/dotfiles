@@ -1,0 +1,12 @@
+# List of glob patterns for paths to ignore when spell checking
+# Default: []
+ignore_paths = ["target/**/*", ".git/**/*"]
+
+# List of regex patterns to ignore when spell checking
+# Patterns are matched against each line of text, not individual words
+# Useful for domain-specific strings or patterns
+# Note: Backslashes must be escaped in TOML (use \\ instead of \)
+# Default: []
+ignore_patterns = [
+    "https?://[^\\s]+"           # URLs
+]
