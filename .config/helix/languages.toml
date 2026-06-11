@@ -8,6 +8,10 @@ procMacro.enable = true
 command = "codebook-lsp"
 args = ["serve"]
 
+# [language-server.ruff]
+# command = "ruff"
+# args = ["server"]
+
 [[language]]
 name = "glsl"
 file-types = ["rgen", "rchit", "rmiss", "glsl", "vert", "tesc", "tese", "geom", "frag", "comp" ]
@@ -48,8 +52,9 @@ args = { attachCommands = [ "platform select remote-gdb-server", "platform conne
 
 [[language]]
 name = "python"
-language-servers = ["pylsp"]
+language-servers = ["ruff"]
 
 [[language]]
 name = "markdown"
 language-servers = ["codebook"]
+
