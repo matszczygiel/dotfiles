@@ -367,6 +367,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control", "Shift" }, "x", function () xrandr.xrandr() end,
               {description = "xrandr", group = "system"}),
 
+    awful.key({ modkey, "Control", "Shift" }, "m", function () awful.spawn("autorandr -c") end,
+              {description = "autorandr", group = "system"}),
+
     -- Multimedia keys
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
@@ -612,12 +615,8 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-awful.util.spawn_with_shell("sleep 2 && ~/.screenlayout/default.sh")
 awful.util.spawn_with_shell("flameshot")
 awful.util.spawn_with_shell("cbatticon")
-awful.util.spawn_with_shell("nextcloud --background")
-awful.util.spawn_with_shell("sleep 1 && xset r rate 300 50")
-awful.util.spawn_with_shell("sleep 1 && setxkbmap -option caps:escape")
 awful.util.spawn_with_shell("nm-applet")
 
 awful.util.spawn_with_shell("ssh-add ~/.ssh/id_rsa")
