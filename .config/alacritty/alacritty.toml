@@ -8,7 +8,7 @@ draw_bold_text_with_bright_colors = false
 TERM = "xterm-256color"
 
 [font]
-size = 11
+size = 10
 
 [font.bold]
 style = "Bold"
@@ -21,11 +21,14 @@ x = 0
 y = 0
 
 [font.italic]
-style = "SemiBold Italic"
+# style = "SemiBold Italic"
+style = "Medium Italic"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
-style = "SemiBold"
+# family = "JetBrains Mono Nerd Font"
+# style = "SemiBold"
+family = "FiraCode Nerd Font"
+style = "Medium"
 
 [font.offset]
 x = 0
