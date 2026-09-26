@@ -22,13 +22,12 @@ y = 0
 
 [font.italic]
 # style = "SemiBold Italic"
-style = "Medium Italic"
+style = "Italic"
 
 [font.normal]
 # family = "JetBrains Mono Nerd Font"
 # style = "SemiBold"
 family = "FiraCode Nerd Font"
-style = "Medium"
 
 [font.offset]
 x = 0
